@@ -79,3 +79,112 @@ This project focus on creating a sorted list of customers likely to purchase ano
 <h2 dir="auto">Machine Learning Performance</h2>
 
 <p>All machine learning algorithms were trained using cross validation on training data.</p>
+<p dir="auto"><strong>Holdout Validation:</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Model</th>
+            <th align="center">Precision</th>
+            <th align="center">Recall</th>
+            <th align="center">k%</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">random_forest</td>
+            <td align="center">0.2741</td>
+            <td align="center">0.8882</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">extra_trees</td>
+            <td align="center">0.2713</td>
+            <td align="center">0.8790</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">linear_regression</td>
+            <td align="center">0.2666</td>
+            <td align="center">0.8637</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">knn</td>
+            <td align="center">0.2644</td>
+            <td align="center">0.8567</td>
+            <td align="center">40.0</td>
+        </tr>
+    </tbody>
+</table>
+<p dir="auto"><strong>Cross-validation:</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Model</th>
+            <th align="center">k_folds</th>
+            <th align="center">precision_avg</th>
+            <th align="center">precision_std</th>
+            <th align="center">recall_avg</th>
+            <th align="center">recall_std</th>
+            <th align="center">k%</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">random_forest</td>
+            <td align="center">5</td>
+            <td align="center">0.2734</td>
+            <td align="center">0.0039</td>
+            <td align="center">0.8922</td>
+            <td align="center">0.0036</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">extra_trees</td>
+            <td align="center">5</td>
+            <td align="center">0.2697</td>
+            <td align="center">0.0034</td>
+            <td align="center">0.8798</td>
+            <td align="center">0.003</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">linear_regression</td>
+            <td align="center">5</td>
+            <td align="center">0.2666</td>
+            <td align="center">0.003</td>
+            <td align="center">0.8702</td>
+            <td align="center">0.0064</td>
+            <td align="center">40.0</td>
+        </tr>
+        <tr>
+            <td align="center">knn</td>
+            <td align="center">5</td>
+            <td align="center">0.2633</td>
+            <td align="center">0.003</td>
+            <td align="center">0.8594</td>
+            <td align="center">0.0027</td>
+            <td align="center">40.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 dir="auto">Business Results</h1>
+<p>With the Machine Learning model adopted, the marketing team made call campaigns for ~90% of interested customers, reaching only 40% of the total customer base.
+
+Assuming a cost per call of $10.00 and considering the total number of customers (381,109), the company achieved savings of $2,286,660 on phone calls costs (60% cost reduction).</p>
+
+
+<h1 dir="auto">Conclusions</h1>
+<p>With the use of the model in production, it is expected, at least, to double the efficiency in the acquisition of new clients for vehicle insurance.</p>
+
+<p>This is because you will only need to contact 40% of customers to get around 90% conversion. Without the model, when contacting purely random customers, it is reasonable to say that to have 90% of customers likely to close a deal, you would also have to contact 90% of the total list.</p>
+
+<h2 dir="auto">Next Steps</h2>
+<ul>
+<li><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="5"><span class="Q4iAWc">Create more attributes from the existing ones, seeking to generate more inputs for learning the models.</span></span></span></li>
+<li><span class="VIiyi" lang="en"> <span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="2" data-number-of-phrases="5"><span class="Q4iAWc">Use more than one attribute selection method, including Boruta for example.</span></span> </span></li>
+<li><span class="VIiyi" lang="en">Apply <span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="4" data-number-of-phrases="5"><span class="Q4iAWc">hyperparameter fine tuning, in order to optimize the models.</span></span></span></li>
+<li>Allow user to upload customer data as a csv file.</li>
+<li>Display a dashboard on an application page with a brief exploratory analysis of the customer dataset used.</li>
+</ul>
